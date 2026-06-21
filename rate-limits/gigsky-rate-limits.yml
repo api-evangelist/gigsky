@@ -1,0 +1,53 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: GigSky
+providerId: gigsky
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- eSIM
+- Mobile Data
+- Roaming
+- Connectivity
+- IoT
+- Telecom
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  GigSky does not publicly document API rate limits, quotas, or throttling
+  behavior for its enterprise/IoT or partner/reseller RESTful APIs. The API is
+  account-gated, and any rate-limit policy is provided to partners and
+  enterprise customers during onboarding. No rate-limit values, response codes,
+  or backoff guidance are reconciled in this artifact.
+notes: >-
+  Obtain rate-limit and quota details directly from GigSky partner/enterprise
+  documentation during reconciliation. Values below are placeholders pending
+  confirmation.
+sources:
+- https://www.gigsky.com/enterprise-solutions
+- https://www.gigsky.com/iot-solutions
+- https://support.gigsky.com/hc/en-us
+responseCodes:
+  throttled: see provider documentation
+limits:
+- name: API Rate Limit
+  scope: account
+  metric: requests
+  limit: see provider documentation
+  notes: Not publicly documented; provided to partners/enterprises during onboarding.
+policies:
+- name: Account-Gated Access
+  description: >-
+    API access requires partner/enterprise account provisioning; any rate-limit
+    or quota policy is shared through that account-gated channel rather than
+    public documentation.
+- name: Backoff Strategy
+  description: >-
+    Not publicly documented. Clients should implement exponential backoff with
+    jitter and honor any Retry-After header until provider guidance is confirmed.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

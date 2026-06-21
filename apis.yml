@@ -1,0 +1,114 @@
+aid: gigsky
+url: https://raw.githubusercontent.com/api-evangelist/gigsky/refs/heads/main/apis.yml
+name: GigSky
+kind: company
+description: GigSky is a global eSIM and mobile-data roaming platform offering travel
+  and enterprise/IoT cellular connectivity across 190+ destinations. For business,
+  enterprise, and IoT customers it provides the GigSky Enterprise Manager (GEM) and
+  IoT SIM Management portal with RESTful APIs for eSIM provisioning, plan/catalog and
+  connectivity management, orders, and usage controls. The partner/reseller and
+  enterprise API surface is account-gated rather than publicly documented.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- eSIM
+- Mobile Data
+- Roaming
+- Connectivity
+- IoT
+- Telecom
+created: '2026-06-21'
+modified: '2026-06-21'
+specificationVersion: '0.19'
+apis:
+- aid: gigsky:gigsky-plans-catalog-api
+  name: GigSky Plans & Catalog API
+  tags:
+  - Plans
+  - Catalog
+  - Data Plans
+  - Pricing
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.gigsky.com/enterprise-solutions
+  baseURL: https://api.gigsky.com
+  properties:
+  - url: https://www.gigsky.com/enterprise-solutions
+    type: Documentation
+  - url: openapi/gigsky-openapi.yml
+    type: OpenAPI
+  description: Programmatic access to GigSky's catalog of regional and global eSIM
+    data plans by destination and price zone, used by partners and enterprises to
+    browse and select connectivity. Endpoints, base URL, and authentication are
+    partner/enterprise-gated and not publicly documented as of the review date;
+    the base URL shown is illustrative and unverified.
+- aid: gigsky:gigsky-esim-provisioning-api
+  name: GigSky eSIM Provisioning API
+  tags:
+  - eSIM
+  - Provisioning
+  - SIM Management
+  - OTA
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.gigsky.com/iot-solutions
+  baseURL: https://api.gigsky.com
+  properties:
+  - url: https://www.gigsky.com/iot-solutions
+    type: Documentation
+  - url: openapi/gigsky-openapi.yml
+    type: OpenAPI
+  description: RESTful eSIM/SIM provisioning and lifecycle management through the
+    GigSky Enterprise Manager (GEM) and IoT SIM Management portal - assigning and
+    activating eSIM profiles, country-by-country connectivity control, per-SIM and
+    per-user-group limits, sub-accounts, and Over-the-Air (OTA) network provisioning.
+    The API is account-gated; endpoint and auth details are not publicly published.
+- aid: gigsky:gigsky-orders-api
+  name: GigSky Orders API
+  tags:
+  - Orders
+  - Activation
+  - Fulfillment
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.gigsky.com/enterprise-solutions
+  baseURL: https://api.gigsky.com
+  properties:
+  - url: https://www.gigsky.com/enterprise-solutions
+    type: Documentation
+  - url: openapi/gigsky-openapi.yml
+    type: OpenAPI
+  description: Order placement and fulfillment for eSIM plans and SIM deployments by
+    partners and enterprises, tied to GigSky's pay-as-you-go and pooled-data billing
+    models. Order endpoints, base URL, and authentication are partner/enterprise-gated
+    and not publicly documented.
+- aid: gigsky:gigsky-usage-api
+  name: GigSky Usage API
+  tags:
+  - Usage
+  - Reporting
+  - Data Consumption
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.gigsky.com/enterprise-solutions
+  baseURL: https://api.gigsky.com
+  properties:
+  - url: https://www.gigsky.com/enterprise-solutions
+    type: Documentation
+  - url: openapi/gigsky-openapi.yml
+    type: OpenAPI
+  description: Reporting on data consumption and connectivity usage per SIM, user
+    group, sub-account, or pooled plan, supporting GigSky's monthly statement and
+    pay-as-you-go billing. Usage endpoints and authentication are account-gated and
+    not publicly documented as of the review date.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/gigsky
+- type: Website
+  url: https://www.gigsky.com/
+- type: Documentation
+  url: https://www.gigsky.com/enterprise-solutions
+- type: Plans
+  url: plans/gigsky-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/gigsky-rate-limits.yml
+- type: FinOps
+  url: finops/gigsky-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

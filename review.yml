@@ -1,0 +1,88 @@
+aid: gigsky
+name: GigSky
+review:
+  question: Does GigSky expose a publicly documented developer/partner REST API?
+  answer: false
+  date: '2026-06-21'
+  reviewer: API Evangelist
+  publicApiReference: false
+findings:
+  summary: |
+    GigSky operates a real RESTful API surface for enterprise, IoT, and
+    partner/reseller customers, but it is account-gated and NOT publicly
+    documented. GigSky's enterprise and IoT solution pages state the platform
+    provides a "fully featured SIM Management portal, with RESTful APIs"
+    controlling eSIM/SIM provisioning, country-by-country connectivity,
+    per-SIM and per-user-group usage limits, sub-accounts, and Over-the-Air
+    (OTA) network provisioning. Management happens through the GigSky
+    Enterprise Manager (GEM, gem.gigsky.com) and the IoT SIM Deployment portal
+    (iot.gigsky.com), with sales-led onboarding via business.gigsky.com.
+
+    As of the review date, no public developer portal, API reference, base
+    URL, endpoint list, request/response schema, or authentication scheme is
+    published on gigsky.com or its support center. Consumer travel eSIM plans
+    are sold directly through the GigSky app and website. Because the API and
+    pricing are partner/enterprise-gated and sales-led, this catalog marks
+    pricing, rate-limit, and FinOps artifacts reconciled:false and ships an
+    OpenAPI document with an empty paths object plus clearly-labeled
+    unverified conceptual schemas, to avoid fabricating endpoints.
+  apiSurface:
+    documented: true
+    documentationType: Marketing / solution pages only
+    publicReference: false
+    accessModel: Partner / enterprise account-gated, sales-led onboarding
+    portals:
+    - name: GigSky Enterprise Manager (GEM)
+      url: https://gem.gigsky.com/
+      note: Admin portal for enterprise SIM/eSIM management; referenced on gigsky.com.
+    - name: IoT SIM Deployment Portal
+      url: https://iot.gigsky.com/
+      note: Create-account / trial-deployment entry point for IoT connectivity.
+    - name: Business / Sales
+      url: https://business.gigsky.com/
+      note: Sales-led enterprise onboarding referenced on gigsky.com.
+  capabilitiesConfirmedFromPublicPages:
+    - eSIM/SIM provisioning and activation (RESTful)
+    - Country-by-country connectivity control
+    - Per-SIM, per-user-group, and enterprise-wide usage limits
+    - Sub-account management for multi-national / multi-divisional use
+    - Over-the-Air (OTA) network/operator provisioning
+    - MDM-based eSIM deployment (Jamf, Intune, SOTI) via single-URL delivery
+    - Pay-as-you-go and pooled-data billing with monthly statements
+  notDocumentedPublicly:
+    - API base URL / host
+    - Endpoint paths and HTTP methods
+    - Request/response schemas
+    - Authentication mechanism (API key / bearer / OAuth / mTLS)
+    - Rate limits, quotas, and throttling behavior
+    - Public, machine-readable pricing
+sources:
+  - url: https://www.gigsky.com/enterprise-solutions
+    type: Documentation
+    note: States "fully featured SIM Management portal, with RESTful APIs"; lists GEM, sub-accounts, MDM deployment.
+  - url: https://www.gigsky.com/iot-solutions
+    type: Documentation
+    note: Describes RESTful SIM management, country-by-country control, and OTA provisioning; directs to iot.gigsky.com.
+  - url: https://www.gigsky.com/partner-landing
+    type: Documentation
+    note: References GEM (gem.gigsky.com), business.gigsky.com, pooled data, and pay-as-you-go billing.
+  - url: https://www.gigsky.com/enterprise-esim-getting-started
+    type: Documentation
+    note: No public API reference; directs to business solutions and partnership channels.
+  - url: https://support.gigsky.com/hc/en-us
+    type: Documentation
+    note: End-user help center; no developer/API reference published.
+actions:
+  openapiPath: openapi/gigsky-openapi.yml
+  apisYmlUpdated: true
+  reason: |
+    A real but account-gated RESTful API exists; no public schema is published.
+    The OpenAPI document declares paths:{} and labels all component schemas and
+    the server base URL as unverified/illustrative so no endpoints are
+    fabricated. apis.yml lists four conceptual API surfaces (Plans/Catalog,
+    eSIM Provisioning, Orders, Usage) confirmed from GigSky's public solution
+    pages, with descriptions stating the API is partner/enterprise-gated.
+    Plans, rate-limits, and finops artifacts are marked reconciled:false.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

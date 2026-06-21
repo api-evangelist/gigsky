@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "GigSky Enterprise & IoT API",
+    "version": "0.0",
+    "description": "GigSky operates account-gated RESTful APIs for enterprise/IoT and partner/reseller customers via the GigSky Enterprise Manager (GEM) and IoT SIM Management portal. No public API reference, base URL, endpoints, schemas, or authentication scheme are documented as of 2026-06-21. This collection contains no executable requests; the folders mirror the conceptual API surfaces and any base URL is an illustrative, unverified placeholder. Reconcile against partner documentation obtained directly from GigSky."
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{gigskyPartnerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Plans & Catalog",
+        "type": "folder"
+      },
+      "docs": "Conceptual surface for browsing regional/global eSIM data plans by destination and price zone. No endpoints are publicly documented.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "eSIM Provisioning",
+        "type": "folder"
+      },
+      "docs": "Conceptual surface for eSIM/SIM provisioning, connectivity control, limits, sub-accounts, and OTA provisioning via GEM / IoT portal. No endpoints are publicly documented.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "docs": "Conceptual surface for partner/enterprise order placement and fulfillment. No endpoints are publicly documented.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Usage",
+        "type": "folder"
+      },
+      "docs": "Conceptual surface for data-consumption and connectivity usage reporting per SIM, user group, sub-account, or pooled plan. No endpoints are publicly documented.",
+      "items": []
+    }
+  ]
+}

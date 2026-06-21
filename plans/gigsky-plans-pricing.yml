@@ -1,0 +1,103 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: GigSky
+providerId: gigsky
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- eSIM
+- Mobile Data
+- Roaming
+- Connectivity
+- IoT
+- Telecom
+- Plans
+description: >-
+  GigSky sells consumer travel eSIM data plans (regional and global, by
+  destination and price zone) directly through its apps and website, and offers
+  enterprise/IoT connectivity through the GigSky Enterprise Manager (GEM) on a
+  pay-as-you-go and pooled-data basis with monthly statements. Enterprise, IoT,
+  reseller, and partner API pricing is sales-led / quote-based and is not
+  published as a public, machine-readable price list. Consumer plan prices vary
+  by destination and data allowance and change frequently; specific rates are
+  not reconciled in this artifact.
+notes: >-
+  Consumer plan catalog and prices are listed in the GigSky app and on
+  gigsky.com per destination. Enterprise/IoT and partner/reseller pricing is
+  negotiated through GigSky sales (business.gigsky.com). Verify current pricing
+  and terms with GigSky directly during reconciliation.
+sources:
+- https://www.gigsky.com/
+- https://www.gigsky.com/enterprise-solutions
+- https://www.gigsky.com/iot-solutions
+- https://www.gigsky.com/bulk-sales
+plans:
+- id: gigsky-consumer-data-plans
+  name: Consumer Travel eSIM Data Plans
+  type: usage
+  description: >-
+    Prepaid regional and global eSIM data plans purchased per destination and
+    data allowance through the GigSky app and website. Prices vary by
+    destination and plan size and are not reconciled here.
+  entries:
+  - label: Regional / Global Data Plan
+    name: data_plan
+    type: usage
+    metric: data
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: varies by destination and allowance - see gigsky.com / GigSky app
+    userMultiplied: false
+  elements:
+  - name: eSIM Data Plans
+- id: gigsky-enterprise-iot
+  name: Enterprise & IoT Connectivity
+  type: enterprise
+  description: >-
+    Pay-as-you-go and pooled-data enterprise/IoT connectivity managed through
+    the GigSky Enterprise Manager (GEM) with monthly statements. Pricing is
+    sales-led and negotiated per account.
+  entries:
+  - label: Pay-as-you-go / Pooled Data
+    name: enterprise_connectivity
+    type: usage
+    metric: data
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: contact sales - quote-based, pooled across price zones
+    userMultiplied: false
+  elements:
+  - name: Pooled Data Consumption
+  - name: Sub-Accounts
+  - name: Monthly Statement Billing
+- id: gigsky-partner-reseller
+  name: Partner / Reseller & Bulk eSIM
+  type: enterprise
+  description: >-
+    Reseller, affiliate, travel-agent, and bulk eSIM sales programs with
+    sales-led, negotiated pricing. API access is account-gated; no public
+    price list is published.
+  entries:
+  - label: Reseller / Bulk Agreement
+    name: reseller
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Bulk eSIM Sales
+  - name: Affiliate Program
+  - name: Travel Agent Program
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

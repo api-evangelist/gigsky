@@ -1,0 +1,47 @@
+{
+  "info": {
+    "name": "GigSky Enterprise & IoT API",
+    "description": "GigSky operates account-gated RESTful APIs for enterprise/IoT and partner/reseller customers via the GigSky Enterprise Manager (GEM) and IoT SIM Management portal. GigSky does NOT publish a public API reference: no base URL, endpoints, schemas, or authentication scheme are publicly documented as of 2026-06-21. This collection contains no executable requests because no endpoints are documented; the folders below mirror the conceptual API surfaces (Plans/Catalog, eSIM Provisioning, Orders, Usage) and the {{baseUrl}} variable is an illustrative, unverified placeholder. Reconcile against partner documentation obtained directly from GigSky.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.gigsky.com",
+      "type": "string",
+      "description": "Illustrative, UNVERIFIED base URL. GigSky does not publish an official API host publicly."
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{gigskyPartnerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "item": [
+    {
+      "name": "Plans & Catalog",
+      "description": "Conceptual surface for browsing regional/global eSIM data plans by destination and price zone. No endpoints are publicly documented.",
+      "item": []
+    },
+    {
+      "name": "eSIM Provisioning",
+      "description": "Conceptual surface for eSIM/SIM provisioning, connectivity control, limits, sub-accounts, and OTA provisioning via GEM / IoT portal. No endpoints are publicly documented.",
+      "item": []
+    },
+    {
+      "name": "Orders",
+      "description": "Conceptual surface for partner/enterprise order placement and fulfillment. No endpoints are publicly documented.",
+      "item": []
+    },
+    {
+      "name": "Usage",
+      "description": "Conceptual surface for data-consumption and connectivity usage reporting per SIM, user group, sub-account, or pooled plan. No endpoints are publicly documented.",
+      "item": []
+    }
+  ]
+}

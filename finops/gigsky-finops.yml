@@ -1,0 +1,99 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: GigSky
+providerId: gigsky
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- eSIM
+- Mobile Data
+- Roaming
+- Connectivity
+- IoT
+- Telecom
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of GigSky connectivity spend. GigSky bills consumer travel eSIM
+  plans as prepaid purchases per destination, and enterprise/IoT connectivity on
+  a pay-as-you-go and pooled-data basis with monthly statements via the GigSky
+  Enterprise Manager (GEM). Partner/reseller and bulk pricing is sales-led.
+  Because the API and pricing are account-gated and not publicly published,
+  precise meters, rates, and billing dimensions are not reconciled here.
+notes: >-
+  Confirm billing model, meters, currency, and invoicing details against GigSky
+  enterprise/partner agreements during reconciliation. Columns below reflect
+  publicly observable structure only.
+sources:
+- https://www.gigsky.com/
+- https://www.gigsky.com/enterprise-solutions
+- https://www.gigsky.com/iot-solutions
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: GigSky
+serviceCategory: Telecommunications and Connectivity
+billingModel:
+  pricingCategory: Usage-Based
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+  - Usage
+  - Purchase
+focusColumns:
+  ServiceName: GigSky Connectivity
+  ServiceCategory: Telecommunications and Connectivity
+  ProviderName: GigSky
+  PublisherName: GigSky
+  InvoiceIssuerName: GigSky
+  BillingCurrency: USD
+  ChargeCategory: Usage
+  PricingCategory: Usage-Based
+meters:
+- name: data_consumption
+  description: >-
+    Mobile data consumed per eSIM/SIM, billed via pay-as-you-go or against a
+    pooled data plan. Unit and rate are account-specific and not publicly
+    published.
+  unit: data
+  aggregation: sum
+  dimensions:
+  - account
+  - esim
+  - country
+- name: plan_purchase
+  description: >-
+    Prepaid purchase of a regional/global eSIM data plan. Price varies by
+    destination and allowance.
+  unit: plans
+  aggregation: sum
+  dimensions:
+  - account
+  - plan
+  - destination
+principles:
+- name: Visibility
+  description: >-
+    Use GEM monthly statements and per-SIM/sub-account usage reporting to inspect
+    data consumption across teams and destinations.
+- name: Allocation
+  description: >-
+    Map SIMs to user groups and sub-accounts to allocate connectivity spend to
+    cost centers.
+- name: Optimization
+  description: >-
+    Use pooled data across price zones and country-by-country limits to control
+    roaming spend; right-size plans per destination.
+- name: Accountability
+  description: >-
+    Assign owners per sub-account; review monthly statements against budget.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
