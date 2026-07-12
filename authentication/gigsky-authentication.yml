@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/gigsky-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: GigSkyPartnerAuth
+  type: http
+  scheme: bearer
+  description: Placeholder. GigSky does not publicly document its authentication scheme. Partner/enterprise
+    credentials are issued during account-gated onboarding; the actual mechanism (API key, bearer
+    token, OAuth, or mutual TLS) must be confirmed with GigSky directly.
+  sources:
+  - openapi/gigsky-openapi.yml

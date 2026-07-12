@@ -97,6 +97,10 @@ apis:
     pay-as-you-go billing. Usage endpoints and authentication are account-gated and
     not publicly documented as of the review date.
 common:
+- type: DomainSecurity
+  url: security/gigsky-domain-security.yml
+- type: Authentication
+  url: authentication/gigsky-authentication.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/gigsky
 - type: Website
@@ -109,6 +113,8 @@ common:
   url: rate-limits/gigsky-rate-limits.yml
 - type: FinOps
   url: finops/gigsky-finops.yml
+- url: https://www.gigsky.com/blog
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
