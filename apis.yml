@@ -8,7 +8,20 @@ description: GigSky is a global eSIM and mobile-data roaming platform offering t
   IoT SIM Management portal with RESTful APIs for eSIM provisioning, plan/catalog and
   connectivity management, orders, and usage controls. The partner/reseller and
   enterprise API surface is account-gated rather than publicly documented.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: enterprise
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gigsky.png
 tags:
 - eSIM
 - Mobile Data
