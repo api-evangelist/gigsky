@@ -1,0 +1,120 @@
+openapi: 3.0.1
+info:
+  title: GigSky Enterprise & IoT API
+  description: >-
+    GigSky is a global eSIM and mobile-data roaming platform. For business,
+    enterprise, and IoT customers GigSky operates the GigSky Enterprise Manager
+    (GEM) and an IoT SIM Management portal that, per GigSky's enterprise and IoT
+    solution pages, expose "fully featured SIM Management ... with RESTful APIs."
+    Documented capabilities include eSIM/SIM provisioning, country-by-country
+    connectivity control, per-SIM and per-user-group usage limits, sub-accounts,
+    Over-the-Air (OTA) network provisioning, ordering, and usage reporting.
+
+
+    However, GigSky does NOT publish a public developer/API reference. No base
+    URL, endpoint paths, request/response schemas, or authentication scheme are
+    documented on GigSky's public website as of the review date (2026-06-21).
+    Access to the API is partner/enterprise-gated through account creation in the
+    GigSky Enterprise Manager (gem.gigsky.com) and IoT SIM Deployment portal
+    (iot.gigsky.com), and through sales-led onboarding (business.gigsky.com).
+
+
+    To avoid fabrication, this specification intentionally declares an empty
+    `paths` object. The components below describe only the conceptual resources
+    GigSky's public marketing materials confirm the API manages; they are NOT
+    drawn from a published schema and should be reconciled against partner
+    documentation obtained directly from GigSky before use.
+  termsOfService: https://www.gigsky.com/terms-of-service
+  contact:
+    name: GigSky Support
+    url: https://support.gigsky.com/hc/en-us
+  version: '0.0'
+servers:
+  - url: https://api.gigsky.com
+    description: >-
+      Illustrative, UNVERIFIED base URL. GigSky does not publish an official API
+      base URL publicly; the real host is provided to partners and enterprise
+      customers during account-gated onboarding.
+paths: {}
+components:
+  schemas:
+    Plan:
+      type: object
+      description: >-
+        Conceptual representation of a GigSky data plan (regional/global eSIM
+        plan by destination and price zone). Not derived from a published schema.
+      properties:
+        id:
+          type: string
+          description: Provider plan identifier.
+        name:
+          type: string
+        destinations:
+          type: array
+          items:
+            type: string
+          description: Country/region codes covered by the plan.
+        dataAllowance:
+          type: string
+          description: Included data allowance (e.g., pooled or per-SIM).
+        priceZone:
+          type: string
+      x-unverified: true
+    EsimProfile:
+      type: object
+      description: >-
+        Conceptual representation of an eSIM/SIM profile managed via GEM / the
+        IoT SIM Management portal. Not derived from a published schema.
+      properties:
+        id:
+          type: string
+        iccid:
+          type: string
+        status:
+          type: string
+          description: Lifecycle state (e.g., assigned, active, suspended).
+        connectivity:
+          type: object
+          description: Country-by-country connectivity and limit settings.
+        subAccount:
+          type: string
+      x-unverified: true
+    Order:
+      type: object
+      description: >-
+        Conceptual representation of a partner/enterprise order for eSIM plans or
+        SIM deployments. Not derived from a published schema.
+      properties:
+        id:
+          type: string
+        planId:
+          type: string
+        quantity:
+          type: integer
+        status:
+          type: string
+      x-unverified: true
+    UsageRecord:
+      type: object
+      description: >-
+        Conceptual representation of a usage/consumption record per SIM, user
+        group, sub-account, or pooled plan. Not derived from a published schema.
+      properties:
+        esimId:
+          type: string
+        period:
+          type: string
+        dataUsed:
+          type: string
+        country:
+          type: string
+      x-unverified: true
+  securitySchemes:
+    GigSkyPartnerAuth:
+      type: http
+      scheme: bearer
+      description: >-
+        Placeholder. GigSky does not publicly document its authentication
+        scheme. Partner/enterprise credentials are issued during account-gated
+        onboarding; the actual mechanism (API key, bearer token, OAuth, or
+        mutual TLS) must be confirmed with GigSky directly.

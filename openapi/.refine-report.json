@@ -1,0 +1,14 @@
+{
+  "provider": "gigsky",
+  "sources": [
+    "gigsky-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived gigsky-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
