@@ -76,6 +76,10 @@ apis:
 - aid: gigsky:gigsky-orders-api
   name: GigSky Orders API
   tags:
+  - Order
+  - Activation
+  - Fulfillment
+  tags_raw:
   - Orders
   - Activation
   - Fulfillment
