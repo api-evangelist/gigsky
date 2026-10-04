@@ -1,22 +1,20 @@
-# Kin Score artifact — gigsky — 2026-08-25T154045
+# Kin Score artifact — gigsky — 2026-09-25T232841
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: gigsky
-  schema_version: 0.14.0
-  scored_at: '2026-08-25'
-  run_ts: 2026-08-25T154045
-  composite: 28.5
+  schema_version: 0.23.0
+  scored_at: '2026-09-25'
+  run_ts: 2026-09-25T232841
+  composite: 26.5
   band: thin
   facets:
-    discoverability: 74.1
-    contract_quality: 30.6
-    governance: 0.0
-    operational_transparency: 21.1
-    developer_ergonomics: 23.8
-    commercial_clarity: 39.5
+    discoverability: 66.1
+    contract_quality: 27.6
     contract_governance: 0.0
-    access_clarity: 39.5
+    operational_transparency: 18.9
+    developer_ergonomics: 23.8
+    access_clarity: 36.3
   agent_readiness:
     score: 18.0
     band: agent-aware
@@ -44,5 +42,5 @@ kin_score:
     applies: true
     regime: Telecommunications
     regime_id: telecommunications
-    score: 16.7
+    score: 10.0
     matched_via: tags
