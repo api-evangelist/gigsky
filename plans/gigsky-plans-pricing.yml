@@ -106,3 +106,37 @@ plans:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - metered
+  - subscription
+  units:
+  - negotiated
+  plans:
+  - name: Consumer Travel eSIM Data Plans
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - other
+    periods:
+    - month
+  - name: Enterprise & IoT Connectivity
+    access: enterprise
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Partner / Reseller & Bulk eSIM
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - year
