@@ -1,4 +1,4 @@
-# GigSky (gigsky)
+# GigSky
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,120 +66,111 @@
 
 GigSky is a global eSIM and mobile-data roaming platform offering travel and enterprise/IoT cellular connectivity across 190+ destinations. For business, enterprise, and IoT customers it provides the GigSky Enterprise Manager (GEM) and IoT SIM Management portal with RESTful APIs for eSIM provisioning, plan/catalog and connectivity management, orders, and usage controls. The partner/reseller and enterprise API surface is account-gated rather than publicly documented.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/gigsky/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/gigsky/refs/heads/main/apis.yml)
+**Areas:** eSIM · Mobile Data · Roaming · Connectivity · IoT · Telecommunications
 
-## Tags
+## GigSky on APIs.io
 
-- eSIM
-- Mobile Data
-- Roaming
-- Connectivity
-- IoT
-- Telecom
+Everything profiled for GigSky is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/gigsky/](https://apis.io/providers/gigsky/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (4)
 
-- **Created:** 2026-06-21
-- **Modified:** 2026-06-21
+- [GigSky Plans & Catalog API](https://apis.io/apis/gigsky/gigsky-plans-catalog-api/) — Programmatic access to GigSky's catalog of regional and global eSIM data plans by destination and price zone, used by partners and enterprises to browse and…
+- [GigSky eSIM Provisioning API](https://apis.io/apis/gigsky/gigsky-esim-provisioning-api/) — RESTful eSIM/SIM provisioning and lifecycle management through the GigSky Enterprise Manager (GEM) and IoT SIM Management portal - assigning and activating…
+- [GigSky Orders API](https://apis.io/apis/gigsky/gigsky-orders-api/) — Order placement and fulfillment for eSIM plans and SIM deployments by partners and enterprises, tied to GigSky's pay-as-you-go and pooled-data billing…
+- [GigSky Usage API](https://apis.io/apis/gigsky/gigsky-usage-api/) — Reporting on data consumption and connectivity usage per SIM, user group, sub-account, or pooled plan, supporting GigSky's monthly statement and…
 
-## API Availability
+### Published properties
 
-GigSky's enterprise and IoT product pages confirm a "fully featured SIM Management portal, with RESTful APIs," but GigSky does **not** publish a public developer/API reference. No base URL, endpoint paths, request/response schemas, or authentication scheme are publicly documented as of the review date. API access is partner/enterprise-gated through the GigSky Enterprise Manager (gem.gigsky.com), the IoT SIM Deployment portal (iot.gigsky.com), and sales-led onboarding (business.gigsky.com). The artifacts in this repository document the API surface honestly based on public materials; endpoint, schema, and auth details are marked unverified and must be reconciled against partner documentation obtained directly from GigSky.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Collections (1)
 
-### GigSky Plans & Catalog API
+Postman and Open Collection request collections.
 
-Programmatic access to GigSky's catalog of regional and global eSIM data plans by destination and price zone, used by partners and enterprises to browse and select connectivity. Endpoints, base URL, and authentication are partner/enterprise-gated and not publicly documented as of the review date; the base URL shown is illustrative and unverified.
+- [GigSky Enterprise & IoT API](https://apis.io/collections/gigsky/open-gigsky/)
 
-- **Human URL:** [https://www.gigsky.com/enterprise-solutions](https://www.gigsky.com/enterprise-solutions)
-- **Base URL:** `https://api.gigsky.com`
+#### Security (2)
 
-#### Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Plans
-- Catalog
-- Data Plans
-- Pricing
+- [Gigsky Authentication](https://apis.io/security/gigsky/gigsky-authentication/)
+- [Gigsky Domain Security](https://apis.io/security/gigsky/gigsky-domain-security/)
 
-#### Properties
+#### Plans and pricing (1)
 
-- [Documentation](https://www.gigsky.com/enterprise-solutions)
-- [OpenAPI](openapi/gigsky-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/gigsky.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gigsky.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Published plans, tiers and prices.
 
-### GigSky eSIM Provisioning API
+- [Gigsky Plans Pricing](https://apis.io/plans/gigsky/gigsky-plans-pricing/)
 
-RESTful eSIM/SIM provisioning and lifecycle management through the GigSky Enterprise Manager (GEM) and IoT SIM Management portal - assigning and activating eSIM profiles, country-by-country connectivity control, per-SIM and per-user-group limits, sub-accounts, and Over-the-Air (OTA) network provisioning. The API is account-gated; endpoint and auth details are not publicly published.
+#### Rate limits (1)
 
-- **Human URL:** [https://www.gigsky.com/iot-solutions](https://www.gigsky.com/iot-solutions)
-- **Base URL:** `https://api.gigsky.com`
+Published request limits.
 
-#### Tags
+- [Gigsky Rate Limits](https://apis.io/rate-limits/gigsky/gigsky-rate-limits/)
 
-- eSIM
-- Provisioning
-- SIM Management
-- OTA
+#### FinOps (1)
 
-#### Properties
+What the API costs to run, by operation.
 
-- [Documentation](https://www.gigsky.com/iot-solutions)
-- [OpenAPI](openapi/gigsky-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/gigsky.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gigsky.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Gigsky Finops](https://apis.io/finops/gigsky/gigsky-finops/)
 
-### GigSky Orders API
+## Where to find this API
 
-Order placement and fulfillment for eSIM plans and SIM deployments by partners and enterprises, tied to GigSky's pay-as-you-go and pooled-data billing models. Order endpoints, base URL, and authentication are partner/enterprise-gated and not publicly documented.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- **Human URL:** [https://www.gigsky.com/enterprise-solutions](https://www.gigsky.com/enterprise-solutions)
-- **Base URL:** `https://api.gigsky.com`
-
-#### Tags
-
-- Orders
-- Activation
-- Fulfillment
-
-#### Properties
-
-- [Documentation](https://www.gigsky.com/enterprise-solutions)
-- [OpenAPI](openapi/gigsky-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/gigsky.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gigsky.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### GigSky Usage API
-
-Reporting on data consumption and connectivity usage per SIM, user group, sub-account, or pooled plan, supporting GigSky's monthly statement and pay-as-you-go billing. Usage endpoints and authentication are account-gated and not publicly documented as of the review date.
-
-- **Human URL:** [https://www.gigsky.com/enterprise-solutions](https://www.gigsky.com/enterprise-solutions)
-- **Base URL:** `https://api.gigsky.com`
-
-#### Tags
-
-- Usage
-- Reporting
-- Data Consumption
-
-#### Properties
-
-- [Documentation](https://www.gigsky.com/enterprise-solutions)
-- [OpenAPI](openapi/gigsky-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/gigsky.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gigsky.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/gigsky)
 - [Website](https://www.gigsky.com/)
 - [Documentation](https://www.gigsky.com/enterprise-solutions)
-- [Plans](plans/gigsky-plans-pricing.yml)
-- [Rate Limits](rate-limits/gigsky-rate-limits.yml)
-- [Fin Ops](finops/gigsky-finops.yml)
+- [Blog](https://www.gigsky.com/blog)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 19.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 27.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 7.9 |
+
+**Agent readiness 16.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.0** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/gigsky/](https://apis.io/providers/gigsky/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for GigSky: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/gigsky/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
